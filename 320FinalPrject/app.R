@@ -71,17 +71,17 @@ ui <- fluidPage(
                            selectInput("state_to_select",
                                        "Select a State:",
                                        choices = sort(states)),
-                           plotOutput("bar_plot")),
+                           plotOutput("bar_plot", width = "700px")),
                   tabPanel("Error Bar Plot", 
                            
-                           plotOutput("errbar_plot"))
+                           plotOutput("errbar_plot",width = "700px"))
 )
     ))
 )
     
 
 
-# Define server logic required to draw a histogram
+
 server <- function(input, output) {
 
     output$map_plot <- renderPlot({
